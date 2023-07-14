@@ -1,3 +1,14 @@
+# ANSIBLE PLAYBOOKS on AWS ARCHITECTURE
+
+### This project creates webserver and a MySQL database using Ansible-playbooks over AWS EC2 instances
+
+## FLOW CHART
+### STAGE 1 - LAUNCHING AWS EC2 INSTANCES
+### STAGE 2 - GLOBAL CONFIGURATIONS
+### STAGE 3 - FIRST PLAYBOOK - Installs webserver and MySQL service
+### STAGE 4 - SECOND PLAYBOOK - Remote operations on DB
+### STAGE 5 - LOCAL CONFIGURATIONS FOR TEAMWORK
+
 Stage 1 - Launch servers
 Login to AWS account and launch EC2 instances as follows:
 1. Control Machine - Ubuntu t2.micro [SG: 22/MyIP] for Ansible with user data script from here - create new key-pair: Control-key.pem 
