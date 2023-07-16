@@ -16,8 +16,8 @@ This project creates webserver and a MySQL database using Ansible-playbooks over
 #### We create 4 instances - one for our Ansible control machine through which we will work, 2 web servers to observe differences and one db
 Login to your AWS account and launch EC2 instances as follows:
 1. Control Machine - Ubuntu t2.micro [Control Machine SG: 22/MyIP] for Ansible with user data script from here - create new key-pair: Control-key.pem 
-2. Web01/Web02 - Two instances, centOS7 (free tier) [WebServer SG: 22/MyIP -- 22/Control Machine SG -- 80/MyIP] create new key-pair vprofile-key.pem
-3. db01 - centOS7 (free tier) [DBServer SG: 22/MyIP -- 22/Control Machine SG] use key-pair vprofile-key.pem
+2. Web01/Web02 - Two instances, centOS7 (free tier) [WebServer SG: 22/MyIP -- 22/Control Machine SG -- 80/MyIP] create new key-pair vprofile-key.pem (( A better practice would be to use port 443 and attach the apropriate ACM rather than using port 80, but for the ease of use I'm using port 80 ))
+4. db01 - centOS7 (free tier) [DBServer SG: 22/MyIP -- 22/Control Machine SG] use key-pair vprofile-key.pem
 
 ### STAGE 2 - GLOBAL CONFIGURATIONS
 #### Create inventory file, general configuration file and dependencies 
